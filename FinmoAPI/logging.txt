@@ -1,0 +1,170 @@
+Request method:	POST
+Request URI:	https://api.qafinmo.net/v1/payout
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer QUtfRklOTU9fU0JYX0FFNkVGRDYyNTRCNDRFOTBBOEM5OUVGNkREQzRCNzlEOlNLX0ZJTk1PX1NCWF80QUU2M0Y1M19FOUUxXzQxNjlfQkQzMV8zOTY1NTcwMTQ4QjU=
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "senderAmount": 10,
+    "senderCurrency": "AUD",
+    "beneficiaryAmount": 10,
+    "beneficiaryCurrency": "AUD",
+    "payoutMethodName": "au_bank_acct",
+    "payoutMethodParam": null,
+    "payoutSenderParam": null,
+    "payoutBeneficiaryParam": null,
+    "purposeCode": "SELF",
+    "organizationReferenceId": "some-org-ref-2211",
+    "metadata": null,
+    "additionalProperties": null
+}
+HTTP/1.1 400 Bad Request
+Date: Wed, 25 Jan 2023 13:56:12 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1025
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+ETag: W/"401-tPkpQoit0GKgyR8ohViMGmCvngM"
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+
+{
+    "request_id": "ad6687891a788f2f535b3b7460d787b7",
+    "request_time": "2023-01-25T13:56:12.710Z",
+    "success": false,
+    "status_code": 400,
+    "status_text": "Bad Request",
+    "error": {
+        "code": 100400,
+        "name": "INVALID_FIELD_OR_VALUE_ERROR",
+        "message": [
+            "property senderAmount should not exist",
+            "property senderCurrency should not exist",
+            "property beneficiaryAmount should not exist",
+            "property beneficiaryCurrency should not exist",
+            "property payoutMethodName should not exist",
+            "property payoutMethodParam should not exist",
+            "property payoutSenderParam should not exist",
+            "property payoutBeneficiaryParam should not exist",
+            "property purposeCode should not exist",
+            "property organizationReferenceId should not exist",
+            "property additionalProperties should not exist",
+            "beneficiary_currency must be a string",
+            "beneficiary_currency should not be empty",
+            "beneficiary_currency must be a valid ISO 4217 currency code",
+            "payout_method_name must be a string",
+            "payout_method_name should not be empty",
+            "purpose_code must be a string",
+            "purpose_code should not be empty"
+        ]
+    }
+}
+Request method:	GET
+Request URI:	https://api.qafinmo.net/v1/payout/payout_fc94026188c947739aeef6dbd6e4b664
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer QUtfRklOTU9fU0JYX0FFNkVGRDYyNTRCNDRFOTBBOEM5OUVGNkREQzRCNzlEOlNLX0ZJTk1PX1NCWF80QUU2M0Y1M19FOUUxXzQxNjlfQkQzMV8zOTY1NTcwMTQ4QjU=
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 25 Jan 2023 13:56:13 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1857
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+ETag: W/"741-lilSeS+6kh52v6PunONSRSIYt/c"
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+
+{
+    "request_id": "f9bdf61330ba75ca673048825261b743",
+    "request_time": "2023-01-25T13:56:13.640Z",
+    "success": true,
+    "status_code": 200,
+    "status_text": "OK",
+    "data": {
+        "payout_id": "payout_fc94026188c947739aeef6dbd6e4b664",
+        "payout_method_name": "au_bank_acct",
+        "payout_method_param": {
+            
+        },
+        "org_id": "org_ab7b1c7f0af94804bc32963711974b33",
+        "debit_wallet_id": "wallet_c91eed8b9d3040ac8efe77f553162d18",
+        "fees_wallet_id": "wallet_017c94f83f234d3f915313999a25dbfb",
+        "debit_wallet_transaction_id": "w_txn_4ed5625883ac43bdba90e2e8038da5ad",
+        "transaction_id": null,
+        "fees_wallet_transaction_id": null,
+        "beneficiary_amount": 50,
+        "beneficiary_currency": "AUD",
+        "beneficiary_country": "AU",
+        "sender_amount": 50,
+        "sender_currency": "AUD",
+        "sender_country": null,
+        "fx_conversion_id": null,
+        "fx_rate_id": null,
+        "fx_rate": 1,
+        "description": null,
+        "purpose_code": "SELF",
+        "receipt_email": null,
+        "payout_reference": null,
+        "statement_descriptor": null,
+        "webhook_url": null,
+        "status": "PENDING",
+        "payout_type": "DOMESTIC_PAYOUT",
+        "payout_beneficiary_id": null,
+        "payout_sender_id": null,
+        "payout_beneficiary_param": {
+            "bsb": "123456",
+            "type": "individual",
+            "currency": "AUD",
+            "individual": {
+                "last_name": "Doe",
+                "first_name": "John"
+            },
+            "bank_country": "AU",
+            "account_number": "12345678"
+        },
+        "payout_sender_param": {
+            
+        },
+        "is_paid": false,
+        "paid_at": null,
+        "paid_amount": null,
+        "paid_currency": null,
+        "is_returned": false,
+        "returned_at": null,
+        "returned_amount": null,
+        "returned_currency": null,
+        "payout_returned_wallet_id": null,
+        "payout_returned_wallet_transaction_id": null,
+        "payout_returned_transaction_id": null,
+        "fees_without_tax": null,
+        "tax_on_fees": null,
+        "fees_including_tax": null,
+        "fees_currency": "AUD",
+        "is_fees_charged": false,
+        "metadata": {
+            "any-custom-ref": "INV_123"
+        },
+        "additional_data": null,
+        "organization_reference_id": "some-org-ref-2211",
+        "is_reconciled": false,
+        "created_at": "2023-01-24T13:00:49.183Z",
+        "updated_at": "2023-01-24T13:00:49.183Z",
+        "reason_for_return": null,
+        "reason_for_failure": null
+    }
+}
